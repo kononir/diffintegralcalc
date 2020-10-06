@@ -12,6 +12,7 @@ public class IntegralCalculationServiceImpl implements IntegralCalculationServic
         double x = a + h / 2;
         for (int i = 0; i < m; i++) {
             s += fun.apply(x);
+            x += h;
         }
         return s * h;
     }
